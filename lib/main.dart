@@ -1,26 +1,26 @@
-import 'package:flutter/material.dart';
-import 'dart:math';
-void main(){
-  runApp(MyApp());
+import 'package:flutter/material.dart';   //the basic package which uses material design
+import 'dart:math';                 // we need to generate the random numbers
+void main(){                        // everything starts from main
+  runApp(MyApp());                  //runApp method is used to run a class or a widget here it's MyApp
 }
-class MyApp extends StatelessWidget {
+class MyApp extends StatelessWidget {             // MyApp is a stateless widget we are using
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context) {           // we are overriding the build method
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: MyIdiot(title:"Iam Ukku"),
+      home: MyIdiot(title:"Iam Ukku"),           // Here we are calling another class MyIdiot
     );
   }
 }
-class MyIdiot extends StatefulWidget {
-  MyIdiot({Key key,this.title}):super (key:key);
+class MyIdiot extends StatefulWidget {             //it's a statefulwidget
+  MyIdiot({Key key,this.title}):super (key:key);    // constructor
   final String title;
   @override
   _MyIdiotState createState() => _MyIdiotState();
 
 }
 
-class _MyIdiotState extends State<MyIdiot> {
+class _MyIdiotState extends State<MyIdiot> {           //its a tail of the original class, where the
   int _counter=0;
   int _score=0;
   int _temp1,_temp2,_temp3;
